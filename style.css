@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('font.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.heart {
+    position: absolute;
+    width: 2vw; /* Utilisation de vw pour que la taille soit relative à la largeur de la vue */
+    height: 2vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.red-heart {
+    background-image: url('red_heart.png'); /* Assurez-vous que ce chemin est correct */
+}
+
+.white-heart {
+    background-image: url('white_heart.png'); /* Assurez-vous que ce chemin est correct */
+}
+
+#love-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2vh 4vw; /* Utilisation de vh et vw pour un padding qui s'ajuste */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 90%; /* Garantit que la carte ne dépasse pas la largeur de l'écran */
+    width: 300px; /* Largeur de base */
+    font-size: 1vw; /* Taille de police relative à la largeur */
+}
+
+@media (max-width: 600px) {
+    #love-card {
+        width: 90%; /* Sur les écrans plus petits, la carte prend toute la largeur disponible */
+        font-size: 4vw; /* Augmente la taille de la police pour la lisibilité sur les petits écrans */
+    }
+    .heart {
+        width: 4vw;
+        height: 4vw;
+    }
+}
